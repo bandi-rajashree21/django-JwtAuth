@@ -29,13 +29,15 @@ The server will be running at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ## Obtain Access & Refresh Token
 **Endpoint:** `POST /api/token/`
 ### Request Body:
-```json{
+```json
+{
   "username": "your_username",
   "password": "your_password"
 }
 ```
 ### Response:
-```json{
+```json
+{
   "refresh": "refresh_token_here",
   "access": "access_token_here"
 }
@@ -44,12 +46,14 @@ The server will be running at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ## Refresh Access Token
 **Endpoint:** `POST /api/token/refresh/`
 ### Request Body:
-```json{
+```json
+{
   "refresh": "your_refresh_token"
 }
 ```
 ### Response:
-```json{
+```json
+{
   "access": "new_access_token"
 }
 ```
@@ -59,5 +63,7 @@ The server will be running at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ### Header:
 authorization: Bearer `<access_token>`
 ### Response:
-```json{
+```json
+{
   "message": "Hello, Rajashree"
+}
